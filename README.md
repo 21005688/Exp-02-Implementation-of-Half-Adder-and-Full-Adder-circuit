@@ -31,24 +31,66 @@ Sum =A’B’Cin + A’BCin’ + ABCin + AB’Cin’ = A ⊕ B ⊕ Cin Carry = A
 
 ### Procedure
 
-Connect the supply (+5V) to the circuit
-Switch ON the main switch
-If the output is 1, then the led glows.
+1. Connect the supply (+5V) to the circuit
+2. Switch ON the main switch
+3. If the output is 1, then the led glows.
 ### 
 Program:
 /*
+```
 Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
+Developed by: J.DEEPIKA
+RegisterNumber: 212221230016
+
+HALF ADDER
+
+module Adder(a,b,sum,carry);
+input a,b;
+output sum,carry;
+xor(sum,a,b);
+and(carry,a,b);
+endmodule 
+
+FULL ADDER
+
+module FullAdder(a,b,c,sum,carry);
+input a,b,c;
+output sum,carry;
+assign sum = ((a^b)^c);
+assign carry = ((a&b)|(b&c)|(c&a));
+endmodule
+```
 */
 Logic symbol & Truthtable
 RTL realization
 
 ### Output:
-### RTL
+
+### HALF ADDER:
+
+![HALF](https://user-images.githubusercontent.com/94747031/201806301-bb3e6d28-7be2-4b69-bbda-bb6973a6aecf.png)
+
+### RTL:
+![RLT](https://user-images.githubusercontent.com/94747031/201806367-986fbd93-517f-4ba5-9480-23b128f70c8f.png)
+![INT OUT](https://user-images.githubusercontent.com/94747031/201806404-820b832b-9aef-4881-80b6-782567a3112b.png)
+
 ### TIMING DIAGRAM
 
+![TIME](https://user-images.githubusercontent.com/94747031/201806417-2173d7e8-93f6-4dc8-b784-dfed9a189f05.png)
 
-### TRUTH TABLE 
+### FULL ADDER:
+
+![FULL](https://user-images.githubusercontent.com/94747031/201806514-2598545e-4339-4b5c-9e83-e23b180e830a.png)
+
+![FULL OUT](https://user-images.githubusercontent.com/94747031/201806554-dbba06c7-03f3-4e12-9e72-c08a5a90d14c.png)
+
+## TRUTH TABLE:
+
+![TRUTH](https://user-images.githubusercontent.com/94747031/201806630-46e26ca6-85b5-4740-a21c-6c44c5a0cc1e.png)
+
+## TIMING DIAGRAM:
+![TIMER 2](https://user-images.githubusercontent.com/94747031/201806678-7f6d44d0-bbf6-466c-8a2b-06e4340883b2.png)
+
 
 ### Result:
+Thus, a half adder and full adder circuit is designed to verify its truth table in Quartus using Verilog programming.
